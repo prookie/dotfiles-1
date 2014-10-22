@@ -1,0 +1,15 @@
+{
+  "name": "weather-package",
+  "main": "./lib/weather-package",
+  "version": "1.5.1",
+  "description": "Shows weather, temperature and pressure right in your editor.",
+  "activationEvents": [
+    "weather-package:toggle"
+  ],
+  "repository": "https://github.com/gladimdim/weather-package",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {}
+}

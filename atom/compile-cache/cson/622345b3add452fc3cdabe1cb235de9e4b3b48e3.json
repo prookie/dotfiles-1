@@ -1,0 +1,1 @@
+{"menu":[{"label":"Packages","submenu":[{"label":"Go","submenu":[{"label":"Format","command":"go-format:format"}]}]}]}

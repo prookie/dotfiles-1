@@ -1,0 +1,30 @@
+{
+  "name": "weather-package",
+  "main": "./lib/weather-package",
+  "version": "1.5.1",
+  "description": "Shows weather, temperature and pressure right in your editor.",
+  "activationEvents": [
+    "weather-package:toggle"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gladimdim/weather-package"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "# weather-package package\n\nThis package allows you to check weather right in your editor.\nPlugin shows in status bar current condition outside, temperature and pressure:\n\n![](https://lh6.googleusercontent.com/-KusI4Ea8oLM/U3SgQmcPYII/AAAAAAAA_u0/-ChIwc32Dus/s417/Screen%2520Shot%25202014-05-15%2520at%25202.07.34%2520PM%25201.png)\n\nIt is possible to switch off showing temperature and pressure.\n\nUse shortcut 'ctrl-alt-o' (cmd-option-o) to toggle display of weather.\n\nUse settings to set your home town and units of measure.\nRun plugin at least once to see its settings.\n![](https://lh3.googleusercontent.com/-A72pR7cI6tE/U3pd5oGqcLI/AAAAAAAA_zk/ac-KIG22Bqk/s411/Screen%2520Shot%25202014-05-19%2520at%252010.38.33%2520PM.png)\n\nAll weather info is provided by www.openweathermap.org. \n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/gladimdim/weather-package/issues"
+  },
+  "homepage": "https://github.com/gladimdim/weather-package",
+  "_id": "weather-package@1.5.1",
+  "dist": {
+    "shasum": "2f39bab1c0403b5f9eaf1647020c7504b997c48d"
+  },
+  "_resolved": "/private/var/folders/fz/j22sgsxd2tb97mzzprg7sx980000gn/T/d-114815-40039-1mli9eu/package.tgz",
+  "_from": "/private/var/folders/fz/j22sgsxd2tb97mzzprg7sx980000gn/T/d-114815-40039-1mli9eu/package.tgz"
+}
