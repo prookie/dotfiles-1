@@ -1,0 +1,52 @@
+{
+  "name": "foldingtext-markdown",
+  "main": "./lib/foldingtext-markdown",
+  "version": "1.3.2",
+  "description": "Author Markdown in the FoldingText for Atom outliner",
+  "consumedServices": {
+    "foldingtext-service": {
+      "versions": {
+        "0": "consumeFoldingTextService"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FoldingText/foldingtext-markdown"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {},
+  "readme": "# foldingtext-markdown package\n\nEdit Markdown in the [FoldingText for Atom](https://atom.io/packages/foldingtext-for-atom) outliner.\n\n## This is a work in progress\n\nIt's not yet a complete solution. I'm offering it as a starting point for interested people to test out and see the general direction that Markdown editing in FoldingText for Atom will take.\n\n## Getting Started\n\nThis package contains:\n\n- Commands to copy an outline as Markdown and paste Markdown as an outline.\n\n- Commands for setting Markdown `data-type`s on items. CommonMark AST type names are used for `data-type` values. Example types include `Header`, `CodeBlock`, `Ordered`, etc.\n\n- Style rules making those types visible in the outline editor.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/FoldingText/foldingtext-markdown/issues"
+  },
+  "homepage": "https://github.com/FoldingText/foldingtext-markdown",
+  "_id": "foldingtext-markdown@1.3.2",
+  "_shasum": "25a5e851e377ca2de8ce661b941eb0ff4c615c09",
+  "_resolved": "file:../d-11578-8806-17mubmw/package.tgz",
+  "_from": "../d-11578-8806-17mubmw/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "coffeelint.json",
+        "package.json"
+      ],
+      ".js": [
+        "lib/dependencies/commonmark.min.js",
+        "lib/dependencies/to-markdown.js"
+      ],
+      ".coffee": [
+        "lib/foldingtext-markdown.coffee",
+        "lib/foldingtext-to-markdown.coffee",
+        "lib/markdown-to-foldingtext.coffee"
+      ]
+    },
+    "folders": []
+  }
+}

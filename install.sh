@@ -5,7 +5,7 @@ echo "Start the setup of the dotfiles"
 
 # .osx install
 echo "Run .osx"
-./.osx
+./.osx      # TODO: review all settings in .osx
 
 # zsh install
 echo "Install zsh-config"

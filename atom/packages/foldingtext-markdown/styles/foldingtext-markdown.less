@@ -1,0 +1,75 @@
+@import "ui-variables";
+@import "syntax-variables";
+
+li[data-type="Paragraph"] > .ft-branch-controls > .ft-handle:before {
+  content: "";
+}
+
+li[data-type="Header"] {
+  > .ft-branch-controls > .ft-handle:before {
+    content: "";
+  }
+  > .ft-branch > .ft-item-content > .ft-body-text {
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
+
+li[data-type="BlockQuote"] {
+  font-style: italic;
+  > .ft-branch-controls > .ft-handle:before {
+    content: "";
+  }
+  > .ft-branch > .ft-item-content > .ft-body-text {
+    &:before {
+      content: '“';
+    }
+    &:after {
+      content: '”';
+    }
+  }
+}
+
+li[data-type="CodeBlock"] {
+  font-family: monospace;
+  > .ft-branch-controls > .ft-handle:before {
+    content: "";
+  }
+  > .ft-branch > .ft-item-content > .ft-body-text {
+  }
+}
+
+li[data-type="Bullet"] > .ft-branch-controls > .ft-handle:before {
+  content: "•";
+}
+
+.ft-children {
+  counter-reset:OrderedCounter 0;
+}
+
+li[data-type="Ordered"] > .ft-branch-controls > .ft-handle:before {
+  content: counter(OrderedCounter, decimal)".";
+  counter-increment: OrderedCounter;
+}
+
+
+/*
+@handleImage: url('data:image/svg+xml;utf8,<svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><g><circle fill="@{syntax-text-color}" cx="12px" cy="12px" r="2.5px" /></g></svg>');
+@expandableHandleBackgroundColor: fade(@syntax-text-color, 15%);
+@expandableHandleBackgroundImage: url('data:image/svg+xml;utf8,<svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><g><circle fill="@{expandableHandleBackgroundColor}" cx="12px" cy="12px" r="8px" /></g></svg>');
+
+.ft-handle:before {
+  display: inline-block;
+  width: @item-indent-spacing;
+  font-weight: normal;
+  content: '\00a0';
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: @line-height;
+  background-image: @handleImage;
+}
+
+.bhasChildren:not(.bexpanded) > .ft-branch-controls > .ft-handle:before {
+  background-image: @handleImage, @expandableHandleBackgroundImage;
+}
+*/

@@ -1,0 +1,131 @@
+@import "ui-variables";
+
+/* Layout */
+
+atom-panel.modal.expose-panel {
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.expose-view {
+  @shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+  height: 100%;
+
+  .expose-top {
+    text-align: right;
+
+    a::before {
+      .icon-resize(32px);
+    }
+  }
+
+  // Tab bar overrides
+  .tab-bar {
+    justify-content: space-around;
+    flex-flow: row wrap;
+
+    height: initial;
+    background: inherit;
+    box-shadow: inherit;
+    border-bottom: none;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+
+    .tab-container {
+      width: 210px;
+      margin: 10px 5px;
+      -webkit-user-drag: element;
+
+      .close-icon {
+        display: none;
+      }
+
+      &:hover {
+        .tab-body {
+          box-shadow: @shadow;
+        }
+
+        .close-icon {
+          display: block;
+        }
+      }
+
+      .tab {
+        margin: 0 auto;
+        cursor: move;
+        -webkit-user-drag: initial;
+
+        .title::before {
+          margin-right: 5px;
+        }
+      }
+
+      .tab-body {
+        background: @base-background-color;
+        border-top-style: solid;
+        border-top-width: 1px;
+        transition: box-shadow 0.3s ease;
+        height: 140px;
+        margin: 5px 4px;
+        padding: 5px;
+        text-align: center;
+        cursor: pointer;
+
+        &>* {
+          width: 190px;
+          height: 130px;
+        }
+
+        a::before {
+          position: relative;
+          top: 25%;
+          .icon-resize(64px);
+        }
+
+        a.animate::before {
+          -webkit-animation: spin 1s infinite linear;
+        }
+      }
+    }
+  }
+
+  // Modal zoom animation
+  &.animate {
+  	transform: scale(0.7);
+  	opacity: 0;
+  	transition: all 0.1s;
+  }
+
+  &.animate.visible {
+  	transform: scale(1);
+  	opacity: 1;
+  }
+}
+
+/* Helpers */
+
+.ghost {
+  opacity: 0.4;
+}
+
+.icon-resize(@size) {
+  font-size: @size;
+  height: @size;
+  width: @size;
+}
+
+@-webkit-keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+atom-workspace-axis.expose-blur {
+  -webkit-filter: blur(5px)
+}

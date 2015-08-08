@@ -1,0 +1,429 @@
+{
+  "name": "foldingtext-for-atom",
+  "main": "./lib/foldingtext",
+  "version": "0.9.0",
+  "description": "Outline editor with productivity features.",
+  "keywords": [
+    "outline",
+    "notes",
+    "tasks",
+    "todos",
+    "GTD"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FoldingText/foldingtext-for-atom"
+  },
+  "license": "Commercial Shared Source",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBarService"
+      }
+    }
+  },
+  "providedServices": {
+    "foldingtext-service": {
+      "description": "FoldingText Service",
+      "versions": {
+        "0.0.1": "provideFoldingTextService"
+      }
+    }
+  },
+  "dependencies": {
+    "clear-cut": "^2.0.1",
+    "fast-diff": "^1.0.0",
+    "fuzzaldrin": "^2.1.0",
+    "matches-selector": "^1.0.0",
+    "q": "^1.1.2",
+    "shallow-equals": "0.0.0",
+    "should": "^7.0.0",
+    "underscore-plus": "^1.6.6",
+    "velocity-animate": "^1.2.1"
+  },
+  "readme": "# FoldingText for Atom [![Build Status](https://travis-ci.org/FoldingText/foldingtext-for-atom.svg)](https://travis-ci.org/FoldingText/foldingtext-for-atom) [![Dependencies Status](https://david-dm.org/foldingtext/foldingtext-for-atom.svg)](https://david-dm.org/foldingtext/foldingtext-for-atom)\n\nFor making lists in [Atom](https://atom.io). FoldingText is an outline editor with productivity features.\n\nThis is commercial software. I will charge for it when it reaches 1.0. Source code is included, but it is *not* \"open source\". Your are not allowed to redistribute FoldingText's code. Thank you.\n\n<p>\n  <video style=\"border-radius: 5px;\" width=\"616\" height=\"340\" poster=\"http://foldingtext.s3.amazonaws.com/foldingtext-for-atom-demo-poster.png\" autoplay=\"\" loop=\"\">\n    <source src=\"http://foldingtext.s3.amazonaws.com/foldingtext-for-atom-demo.mp4\" type=\"video/mp4\">\n    <img style=\"border-radius: 5px;\" src=\"http://foldingtext.s3.amazonaws.com/foldingtext-for-atom-demo-poster.png\" />\n  </video>\n</p>\n\n- Install: Use the Atom package manager, which can be found in the Settings view or run `apm install foldingtext-for-atom` from the command line.\n- Use *File > New Outline* to start.\n- [Learn More](http://www.foldingtext.com/foldingtext-for-atom)",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/FoldingText/foldingtext-for-atom/issues"
+  },
+  "homepage": "https://github.com/FoldingText/foldingtext-for-atom",
+  "_id": "foldingtext-for-atom@0.9.0",
+  "_shasum": "2b53ec562ba8a614f33321b0b8b9e2c859ecf72b",
+  "_resolved": "file:../d-11578-8799-1fj0ivh/package.tgz",
+  "_from": "../d-11578-8799-1fj0ivh/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "clear-cut",
+        "version": "2.0.1",
+        "path": "node_modules/clear-cut/index.js"
+      },
+      {
+        "name": "fast-diff",
+        "version": "1.0.1",
+        "path": "node_modules/fast-diff/diff.js"
+      },
+      {
+        "name": "fuzzaldrin",
+        "version": "2.1.0",
+        "path": "node_modules/fuzzaldrin/lib/fuzzaldrin.js"
+      },
+      {
+        "name": "matches-selector",
+        "version": "1.0.0",
+        "path": "node_modules/matches-selector/index.js"
+      },
+      {
+        "name": "q",
+        "version": "1.4.1",
+        "path": "node_modules/q/q.js"
+      },
+      {
+        "name": "shallow-equals",
+        "version": "0.0.0",
+        "path": "node_modules/shallow-equals/index.js"
+      },
+      {
+        "name": "should",
+        "version": "7.0.2",
+        "path": "node_modules/should/index.js"
+      },
+      {
+        "name": "should-equal",
+        "version": "0.5.0",
+        "path": "node_modules/should/node_modules/should-equal/index.js"
+      },
+      {
+        "name": "should-format",
+        "version": "0.3.0",
+        "path": "node_modules/should/node_modules/should-format/index.js"
+      },
+      {
+        "name": "should-type",
+        "version": "0.2.0",
+        "path": "node_modules/should/node_modules/should-type/index.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.6",
+        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "velocity-animate",
+        "version": "1.2.2",
+        "path": "node_modules/velocity-animate/velocity.js"
+      },
+      {
+        "name": "jquery",
+        "version": "2.1.4",
+        "path": "node_modules/velocity-animate/node_modules/jquery/dist/jquery.js"
+      }
+    ],
+    "extensions": {
+      ".json": [
+        "coffeelint.json",
+        "node_modules/clear-cut/package.json",
+        "node_modules/fast-diff/package.json",
+        "node_modules/fuzzaldrin/package.json",
+        "node_modules/matches-selector/package.json",
+        "node_modules/q/package.json",
+        "node_modules/shallow-equals/package.json",
+        "node_modules/should/bower.json",
+        "node_modules/should/node_modules/should-equal/package.json",
+        "node_modules/should/node_modules/should-format/package.json",
+        "node_modules/should/node_modules/should-type/package.json",
+        "node_modules/should/package.json",
+        "node_modules/underscore-plus/node_modules/underscore/package.json",
+        "node_modules/underscore-plus/package.json",
+        "node_modules/velocity-animate/node_modules/jquery/bower.json",
+        "node_modules/velocity-animate/node_modules/jquery/package.json",
+        "node_modules/velocity-animate/package.json",
+        "package.json"
+      ],
+      ".coffee": [
+        "lib/core/attribute-run.coffee",
+        "lib/core/attributed-string.coffee",
+        "lib/core/constants.coffee",
+        "lib/core/dom.coffee",
+        "lib/core/item-path.coffee",
+        "lib/core/item-serializer.coffee",
+        "lib/core/item.coffee",
+        "lib/core/line-manager.coffee",
+        "lib/core/mutation.coffee",
+        "lib/core/outline.coffee",
+        "lib/core/serializations/ftml.coffee",
+        "lib/core/serializations/html-fragment.coffee",
+        "lib/core/serializations/opml.coffee",
+        "lib/core/serializations/taskpaper.coffee",
+        "lib/core/serializations/text.coffee",
+        "lib/core/serializations/tidy-dom.coffee",
+        "lib/core/serializations/uri-list.coffee",
+        "lib/core/undo-manager.coffee",
+        "lib/core/url-util.coffee",
+        "lib/editor/animations/children-animation.coffee",
+        "lib/editor/animations/insert-animation.coffee",
+        "lib/editor/animations/move-animation.coffee",
+        "lib/editor/animations/remove-animation.coffee",
+        "lib/editor/event-registery.coffee",
+        "lib/editor/global-mouse.coffee",
+        "lib/editor/item-renderer.coffee",
+        "lib/editor/outline-editor-element.coffee",
+        "lib/editor/outline-editor-focus-element.coffee",
+        "lib/editor/outline-editor-item-state.coffee",
+        "lib/editor/outline-editor.coffee",
+        "lib/editor/raf-debounce.coffee",
+        "lib/editor/selection.coffee",
+        "lib/extensions/edit-link-popover.coffee",
+        "lib/extensions/item-path-grammar.coffee",
+        "lib/extensions/livequeries/live-query.coffee",
+        "lib/extensions/livequeries/outline-live-query.coffee",
+        "lib/extensions/livequeries/workspace-live-query.coffee",
+        "lib/extensions/location-status-bar-item.coffee",
+        "lib/extensions/priorities/index.coffee",
+        "lib/extensions/search-status-bar-item.coffee",
+        "lib/extensions/status/index.coffee",
+        "lib/extensions/tags/index.coffee",
+        "lib/extensions/text-formatting-popover.coffee",
+        "lib/extensions/ui/date-time-element.coffee",
+        "lib/extensions/ui/list-input-element.coffee",
+        "lib/extensions/ui/popovers.coffee",
+        "lib/extensions/ui/scroll-element.coffee",
+        "lib/extensions/ui/text-input-element.coffee",
+        "lib/extensions/ui/token-input-element.coffee",
+        "lib/foldingtext-service.coffee",
+        "lib/foldingtext.coffee"
+      ],
+      ".js": [
+        "lib/core/item-path-parser.js",
+        "lib/core/shortid/alphabet.js",
+        "lib/core/shortid/encode.js",
+        "lib/core/shortid/index.js",
+        "lib/core/shortid/random.js",
+        "lib/core/shortid/shortid.js",
+        "node_modules/clear-cut/index.js",
+        "node_modules/fast-diff/diff.js",
+        "node_modules/fast-diff/test.js",
+        "node_modules/fuzzaldrin/lib/filter.js",
+        "node_modules/fuzzaldrin/lib/fuzzaldrin.js",
+        "node_modules/fuzzaldrin/lib/matcher.js",
+        "node_modules/fuzzaldrin/lib/scorer.js",
+        "node_modules/matches-selector/index.js",
+        "node_modules/q/q.js",
+        "node_modules/q/queue.js",
+        "node_modules/shallow-equals/index.js",
+        "node_modules/shallow-equals/test.js",
+        "node_modules/should/as-function.js",
+        "node_modules/should/gulpfile.js",
+        "node_modules/should/index.js",
+        "node_modules/should/lib/assertion-error.js",
+        "node_modules/should/lib/assertion.js",
+        "node_modules/should/lib/config.js",
+        "node_modules/should/lib/ext/_assert.js",
+        "node_modules/should/lib/ext/assert.js",
+        "node_modules/should/lib/ext/bool.js",
+        "node_modules/should/lib/ext/chain.js",
+        "node_modules/should/lib/ext/contain.js",
+        "node_modules/should/lib/ext/eql.js",
+        "node_modules/should/lib/ext/error.js",
+        "node_modules/should/lib/ext/match.js",
+        "node_modules/should/lib/ext/number.js",
+        "node_modules/should/lib/ext/property.js",
+        "node_modules/should/lib/ext/string.js",
+        "node_modules/should/lib/ext/type.js",
+        "node_modules/should/lib/should.js",
+        "node_modules/should/lib/util.js",
+        "node_modules/should/node_modules/should-equal/format.js",
+        "node_modules/should/node_modules/should-equal/index.js",
+        "node_modules/should/node_modules/should-equal/test.js",
+        "node_modules/should/node_modules/should-format/index.js",
+        "node_modules/should/node_modules/should-format/util.js",
+        "node_modules/should/node_modules/should-type/index.js",
+        "node_modules/should/node_modules/should-type/types.js",
+        "node_modules/should/should.js",
+        "node_modules/should/should.min.js",
+        "node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/underscore-plus/node_modules/underscore/underscore-min.js",
+        "node_modules/underscore-plus/node_modules/underscore/underscore.js",
+        "node_modules/velocity-animate/node_modules/jquery/dist/jquery.js",
+        "node_modules/velocity-animate/node_modules/jquery/dist/jquery.min.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/ajax/jsonp.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/ajax/load.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/ajax/parseJSON.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/ajax/parseXML.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/ajax/script.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/ajax/var/nonce.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/ajax/var/rquery.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/ajax/xhr.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/ajax.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/attributes/attr.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/attributes/classes.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/attributes/prop.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/attributes/support.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/attributes/val.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/attributes.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/callbacks.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/core/access.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/core/init.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/core/parseHTML.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/core/ready.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/core/var/rsingleTag.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/core.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/addGetHookIf.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/curCSS.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/defaultDisplay.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/hiddenVisibleSelectors.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/support.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/swap.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/var/cssExpand.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/var/getStyles.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/var/isHidden.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/var/rmargin.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css/var/rnumnonpx.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/css.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/data/Data.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/data/accepts.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/data/var/data_priv.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/data/var/data_user.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/data.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/deferred.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/deprecated.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/dimensions.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/effects/Tween.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/effects/animatedSelector.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/effects.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/event/ajax.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/event/alias.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/event/support.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/event.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/exports/amd.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/exports/global.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/intro.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/jquery.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/manipulation/_evalUrl.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/manipulation/support.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/manipulation/var/rcheckableType.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/manipulation.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/offset.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/outro.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/queue/delay.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/queue.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/selector-native.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/selector-sizzle.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/selector.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/serialize.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/sizzle/dist/sizzle.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/sizzle/dist/sizzle.min.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/traversing/findFilter.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/traversing/var/rneedsContext.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/traversing.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/arr.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/class2type.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/concat.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/hasOwn.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/indexOf.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/pnum.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/push.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/rnotwhite.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/slice.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/strundefined.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/support.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/var/toString.js",
+        "node_modules/velocity-animate/node_modules/jquery/src/wrap.js",
+        "node_modules/velocity-animate/velocity.js",
+        "node_modules/velocity-animate/velocity.min.js",
+        "node_modules/velocity-animate/velocity.ui.js",
+        "node_modules/velocity-animate/velocity.ui.min.js"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "",
+          "lib/core",
+          "lib/core/serializations",
+          "lib/core/shortid",
+          "lib/editor/animations",
+          "lib/editor",
+          "lib/extensions",
+          "lib/extensions/livequeries",
+          "lib/extensions/priorities",
+          "lib/extensions/status",
+          "lib/extensions/tags",
+          "lib/extensions/ui",
+          "lib",
+          "spec/core",
+          "spec/core/serializations",
+          "spec/editor",
+          "spec"
+        ],
+        "dependencies": {
+          "clear-cut": "^2.0.1",
+          "fast-diff": "^1.0.0",
+          "fuzzaldrin": "^2.1.0",
+          "matches-selector": "^1.0.0",
+          "q": "^1.1.2",
+          "shallow-equals": "0.0.0",
+          "should": "^7.0.0",
+          "underscore-plus": "^1.6.6",
+          "velocity-animate": "^1.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/should",
+          "node_modules/should/lib",
+          "node_modules/should/lib/ext"
+        ],
+        "dependencies": {
+          "should-equal": "0.5.0",
+          "should-format": "0.3.0",
+          "should-type": "0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/should/node_modules/should-equal"
+        ],
+        "dependencies": {
+          "should-type": "0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/should/node_modules/should-format",
+          "node_modules/should/node_modules/should-format/tests/browser",
+          "node_modules/should/node_modules/should-format/tests"
+        ],
+        "dependencies": {
+          "should-type": "0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/underscore-plus/lib",
+          "node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/velocity-animate"
+        ],
+        "dependencies": {
+          "jquery": ">= 1.4.3"
+        }
+      }
+    ]
+  }
+}
