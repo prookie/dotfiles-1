@@ -1,0 +1,33 @@
+{
+  "name": "typo3",
+  "version": "0.4.0",
+  "description": "Typo3 support for Atom",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jawee/atom-typo3.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readme": "# Typo3 support in Atom\n\nOriginally [Converted](http://atom.io/docs/latest/converting-a-text-mate-bundle) from [TYPO3 TextMate tmbundle](https://github.com/andyh/TYPO3.tmbundle)\n\nContributions are greatly appreciated. Please fork this repository and open a\npull request to add snippets, make grammar tweaks, etc.\n\n## Contributing\n\n1. Fork it\n2. Create your feature branch (`git checkout -b my-new-feature`)\n3. Commit your changes (`git commit -am 'Add some feature'`)\n4. Push to the branch (`git push origin my-new-feature`)\n5. Create new Pull Request\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/jawee/atom-typo3/issues"
+  },
+  "homepage": "https://github.com/jawee/atom-typo3",
+  "_id": "typo3@0.4.0",
+  "_shasum": "9631397dda5531b440213373eac1f32b713ceb03",
+  "_resolved": "file:../d-115330-84918-c9p1zd/package.tgz",
+  "_from": "../d-115330-84918-c9p1zd/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

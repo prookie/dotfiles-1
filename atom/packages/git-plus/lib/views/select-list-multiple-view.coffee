@@ -1,5 +1,5 @@
 fuzzyFilter = require('../models/fuzzy').filter
-{$, $$, View, SelectListView} = require 'atom'
+{$, $$, View, SelectListView} = require 'atom-space-pen-views'
 
 # Public: Provides a view that renders a list of items with an editor that
 # filters the items. Enables you to select multiple items at once.
@@ -59,7 +59,7 @@ class SelectListMultipleView extends SelectListView
   # confirm the selections!
   #
   # #### Example (Default)
-  # ```coffeee
+  # ```coffee
   # addButtons: ->
   #   viewButton = $$ ->
   #     @div class: 'buttons', =>

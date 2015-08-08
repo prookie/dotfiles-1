@@ -6,24 +6,18 @@ module.exports =
   # Extension of BranchListView
   # Takes the name of the remote to pull from
   class PullBranchListView extends BranchListView
-    initialize: (@remote) ->
-      git.cmd
-        args: ['branch', '-r'],
-        stdout: (@data) =>
-          if @data.split("\n").length is 1
-            @pull()
-          else
-            super
+    initialize: (@repo, @data, @remote, @extraArgs) ->
+      super
 
     confirmed: ({name}) ->
-      @pull(name.split('/')[1])
+      @pull name.substring(name.indexOf('/') + 1)
       @cancel()
 
     pull: (remoteBranch='') ->
       view = new OutputView()
       git.cmd
-        args: ['pull', @remote, remoteBranch]
+        args: ['pull'].concat(@extraArgs, @remote, remoteBranch)
+        cwd: @repo.getWorkingDirectory()
         stdout: (data) -> view.addLine(data.toString())
         stderr: (data) -> view.addLine(data.toString())
-        exit: (code) =>
-          view.finish()
+        exit: (code) => view.finish()

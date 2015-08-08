@@ -1,1 +1,0 @@
-{"context-menu":{".overlayer":{"Enable weather-package":"weather-package:toggle"}},"menu":[{"label":"Packages","submenu":[{"label":"weather-package","submenu":[{"label":"Toggle","command":"weather-package:toggle"}]}]}]}

@@ -1,5 +1,179 @@
 ## Changelog
 
+### 5.2.2
+
+- fix 'Git log current file'
+
+### 5.2.1
+
+- add support for Git pull using rebase (@maxcnunes)
+- Git diff opens panes with respect to the 'open in pane' setting
+- Commit and diff won't explode if you don't have the spit panes option selected
+
+### 5.1.7
+
+- Git log command now works with submodules and different repos
+- new command: `Remote Checkout`
+
+### 5.1.2
+
+- #206: Fix for commit file syntax highlighting not working sometimes. (@Gwasanaethau)
+
+### 5.1.1
+
+- Fix for commands not working in submodules
+- Fix typos with 'Git Fetch Prune' (@Azakur4)
+
+### 5.1.0
+
+- The Split Pane direction setting actually works now.
+  > Possible choices are [right up down left]. Defaults to right.
+
+### 5.0.7
+
+- Fix #199
+- Fix #198
+- Fix #197
+
+### 5.0.4
+
+- Fix typo of 'notifer' to 'notifier'
+- Fix issue #139
+
+### 5.0.3
+
+- Treeview and StatusBar should update after git commands
+- No longer opening blank file on `Git show` if given an invalid object
+
+### 5.0.2
+
+- Fix typo of 'notifer' to 'notifier'
+- Brought back the `messageTimeout` setting for remaining StatusViews
+
+### 5.0.1
+
+- Major release to be compatible with atom 1.0.0
+- If a window has more than one project with a git repository and a command is attempted,
+  then you can choose which repo to manipulate.
+- New layout for commits in `Git log` command
+- Most StatusViews of command output have been moved to the new notificaton system in atom
+
+### 4.5.0
+
+- Remove some more deprecations (@Azakur4)
+- New command `Git Add All Commit And Push` (@TwanoO67)
+
+### 4.4.13
+
+- bug fix for those using 1.0.0 preview
+
+### 4.4.12
+
+- bug fix, issue #175
+
+### 4.4.11
+
+- Remove deprecated api code
+- Add keywords to package.json
+- Fix refreshing git status after commands to update ui
+- Remove 'emissary' module because it does not work in helping Status and Output views listen for global events
+
+### 4.4.10
+
+- Remove uses of `atom.project.getRepo()`
+
+### 4.4.9
+
+- Refactoring
+- Fixes issue #173
+
+### 4.4.8
+
+- Proper fix for GitRepository trying to refresh on window focus by setting `refreshOnWindowFocus` to false
+
+### 4.4.7
+
+- Update style selectors for diff highlighting
+
+### 4.4.6
+
+- Try to keep only one instance of GitRepository floating around by using either
+`atom.project.getRepo` or calling `::destroy` on an opened instance
+
+### 4.4.2
+
+- Gracefully handle `Git not found error` thanks to @TrangPham.
+- Fix for files not opening when selected from status list
+
+### 4.4.1
+
+- Fix for `Git status` not opening selected file when accessed outside of repo.
+- Fix for some commands working after second time they are selected
+
+### 4.4.0
+
+- Many internal upgrades to keep up with atom 1.0.0 api
+- Commands can now be run from the Git-plus palette for files in other repos outside of the current project.
+- This means you can open a directory of multiple Git repositories and work with individual repos while in the same project.
+
+### 4.3.8
+
+- minor
+
+### 4.3.7
+
+- More api upgrades
+- No longer showing git commands in regular command palette when project is not a repo
+
+### 4.3.6
+
+- Making changes to follow the api for atom 1.0.0
+
+### 4.3.5
+
+- Update css selectors and keymappings with new atom API standards
+
+### 4.3.2
+
+- Fix for `Checkout new branch`
+
+### 4.3.1
+
+- `Git Show` can be cancelled with escape
+
+### 4.3.0
+
+- Confirm on `Git Remove`
+
+### 4.2.6
+
+- Handle case of no available panes after saving commit message
+
+### 4.2.5
+
+- Handle case of no available panes after closing commit message pane
+
+### 4.2.4
+
+- Minor patch
+
+### 4.2.3
+
+- Temporary fix for `Git Pull` issue on yosemite mac's thanks to @Azakur4.
+
+### 4.2.2
+
+- Remove hyphenated package name in menu
+
+### 4.2.1
+
+- Small fix in git-commit.coffee line 90 where promise returns a TextBuffer. Using given TextBuffer for subscriptions
+rather than the 'buffer' property in the TextBuffer.
+
+### 4.2.0
+
+- New Git merge feature thanks to @herlon214
+
 ### 4.1.2
 
 - Using new atom api for configs and subscribing to make it easier for moving forward and maintenance

@@ -1,28 +1,54 @@
-'global':
-  'exception-reporting':
-    'userId': '6b63bc47-e18d-e23d-4ce0-57fa1617c666'
-  'release-notes':
-    'viewedVersion': '0.94.0'
-  'welcome':
-    'showOnStartup': false
-  'metrics':
-    'userId': '42511013081aa31141b20db17c56d13618062c1b'
-  'editor':
-    'fontSize': 14
-    'fontFamily': 'Source Code Pro'
-    'showIndentGuide': true
-    'tabLength': 4
-    'invisibles': {}
-  'core':
-    'themes': [
-      'atom-dark-ui'
-      'base16-tomorrow-dark-theme'
+"*":
+  "exception-reporting":
+    userId: "7dca5b50-3efb-caf9-5e51-e4a576d85fb7"
+  welcome:
+    showOnStartup: false
+  core:
+    disabledPackages: [
+      "ide-flow"
     ]
-    'projectHome': '/Users/marian/Projects'
-  'atom-spotify':
-    'showEqualizer': true
-  'weather-package':
-    'city': 'Paderborn'
-    'showInFahrenheit': false
-  'autoclose-html':
-    'closeOnEndOfOpeningTag': true
+    themes: [
+      "atom-material-ui"
+      "base16-syntax"
+    ]
+  editor:
+    invisibles: {}
+    tabLength: 4
+    fontFamily: "Source Code Pro"
+  linter: {}
+  "linter-elixirc":
+    elixircExecutablePath: "/usr/local/bin/elixirc"
+  tabs:
+    showIcons: true
+    usePreviewTabs: true
+  "ide-flow":
+    flowPath: '''
+      /usr/local/bin/flow
+      
+    '''
+  react: {}
+  jshint:
+    supportLintingJsx: true
+  "linter-jshint":
+    jshintExecutablePath: "/usr/local/bin/jshint"
+  "autocomplete-plus":
+    confirmCompletion: "tab and enter"
+  "autocomplete-plus-python-jedi": {}
+  "base16-syntax":
+    scheme: "Marrakesh"
+  "go-plus":
+    goPath: "/Users/marian/Projects/recipeShare/src/third_party:/Users/marian/Projects/recipeShare/src/code"
+  "isotope-ui":
+    fontFamily: "Source Sans Pro"
+    fontWeight: "Regular"
+    backgroundColor: "false"
+    spaciousMode: true
+  "atom-material-ui":
+    accentColor: "Orange"
+    rippleAccentColor: true
+    showTabIcons: true
+    compactTreeView: true
+    panelContrast: true
+".angular.html.text":
+  editor:
+    tabLength: 4

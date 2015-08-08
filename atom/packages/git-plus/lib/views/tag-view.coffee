@@ -1,16 +1,15 @@
-{$$, SelectListView} = require 'atom'
+{$$, SelectListView} = require 'atom-space-pen-views'
 
 git = require '../git'
 GitShow = require '../models/git-show'
-StatusView = require './status-view'
+notifier = require '../notifier'
 RemoteListView = require '../views/remote-list-view'
 
 module.exports =
 class TagView extends SelectListView
-
-  initialize: (@tag) ->
+  initialize: (@repo, @tag) ->
     super
-    @addClass 'overlay from-top'
+    @show()
     @parseData()
 
   parseData: ->
@@ -22,8 +21,16 @@ class TagView extends SelectListView
     items.push {tag: @tag, cmd: 'Delete', description: 'git tag --delete'}
 
     @setItems items
-    atom.workspaceView.append this
     @focusFilterEditor()
+
+  show: ->
+    @panel ?= atom.workspace.addModalPanel(item: this)
+    @panel.show()
+    @storeFocusedElement()
+
+  cancelled: -> @hide()
+
+  hide: -> @panel?.destroy()
 
   viewForItem: ({tag, cmd, description}) ->
     $$ ->
@@ -37,12 +44,13 @@ class TagView extends SelectListView
     @cancel()
     switch cmd
       when 'Show'
-        GitShow(tag)
+        GitShow(@repo, tag)
         return
       when 'Push'
         git.cmd
-          args: ['remote'],
-          stdout: (data) => new RemoteListView(data, 'push', false, @tag)
+          args: ['remote']
+          cwd: @repo.getWorkingDirectory()
+          stdout: (data) => new RemoteListView(@repo, data, mode: 'push', tag: @tag)
         return
       when 'Checkout'
         args = ['checkout', tag]
@@ -53,4 +61,5 @@ class TagView extends SelectListView
 
     git.cmd
       args: args
-      stdout: (data) -> new StatusView(type: 'success', message: data.toString())
+      cwd: @repo.getWorkingDirectory()
+      stdout: (data) -> notifier.addSuccess(data.toString())

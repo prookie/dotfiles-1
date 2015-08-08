@@ -1,4 +1,5 @@
-{$$, BufferedProcess, SelectListView} = require 'atom'
+{BufferedProcess} = require 'atom'
+{$$, SelectListView} = require 'atom-space-pen-views'
 
 git = require '../git'
 OutputView = require './output-view'
@@ -6,9 +7,11 @@ PullBranchListView = require './pull-branch-list-view'
 
 module.exports =
 class ListView extends SelectListView
-  initialize: (@data, @mode, @setUpstream=false, @tag='') ->
+  initialize: (@repo, @data, {@mode, @tag, @extraArgs}) ->
     super
-    @addClass 'overlay from-top'
+    @tag ?= ''
+    @extraArgs ?= []
+    @show()
     @parseData()
 
   parseData: ->
@@ -20,10 +23,20 @@ class ListView extends SelectListView
       @confirmed remotes[0]
     else
       @setItems remotes
-      atom.workspaceView.append this
       @focusFilterEditor()
 
   getFilterKey: -> 'name'
+
+  show: ->
+    @panel ?= atom.workspace.addModalPanel(item: this)
+    @panel.show()
+
+    @storeFocusedElement()
+
+  cancelled: -> @hide()
+
+  hide: ->
+    @panel?.destroy()
 
   viewForItem: ({name}) ->
     $$ ->
@@ -31,15 +44,26 @@ class ListView extends SelectListView
 
   confirmed: ({name}) ->
     if @mode is 'pull'
-      new PullBranchListView(name)
+      git.cmd
+        args: ['branch', '-r'],
+        cwd: @repo.getWorkingDirectory()
+        stdout: (data) => new PullBranchListView(@repo, data, name, @extraArgs)
+    else if @mode is 'fetch-prune'
+      @mode = 'fetch'
+      @execute name, '--prune'
     else
       @execute name
     @cancel()
 
-  execute: (remote) ->
+  execute: (remote, extraArgs='') ->
     view = new OutputView()
+    args = [@mode]
+    if extraArgs.length > 0
+      args.push extraArgs
+    args = args.concat([remote, @tag])
     git.cmd
-      args: [@mode, remote, @tag]
+      args: args
+      cwd: @repo.getWorkingDirectory()
       stdout: (data) -> view.addLine(data.toString())
       stderr: (data) -> view.addLine(data.toString())
       exit: (code) =>
@@ -47,6 +71,7 @@ class ListView extends SelectListView
           view.reset()
           git.cmd
             args: [@mode, '-u', remote, 'HEAD']
+            cwd: @repo.getWorkingDirectory()
             stdout: (data) -> view.addLine(data.toString())
             stderr: (data) -> view.addLine(data.toString())
             exit: (code) -> view.finish()
