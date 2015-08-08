@@ -5,7 +5,7 @@ ZSH=$HOME/dotfiles/zsh/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="amuse"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -45,7 +45,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git symfony2 nyan laravel)
+plugins=(git symfony2 nyan laravel osx node npm nvm docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,4 +82,3 @@ source ~/.phpbrew/bashrc
 export http_proxy=`proxy-config -h`
 export https_proxy=`proxy-config -s`
 export ftp_proxy=`proxy-config -f`
-export PATH="$PATH:$GOPATH/bin"
