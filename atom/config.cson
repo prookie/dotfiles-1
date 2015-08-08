@@ -7,10 +7,6 @@
     disabledPackages: [
       "ide-flow"
     ]
-    themes: [
-      "atom-material-ui"
-      "base16-syntax"
-    ]
   editor:
     invisibles: {}
     tabLength: 4
