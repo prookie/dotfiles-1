@@ -45,6 +45,7 @@
     showTabIcons: true
     compactTreeView: true
     panelContrast: true
+  pigments: {}
 ".angular.html.text":
   editor:
     tabLength: 4
