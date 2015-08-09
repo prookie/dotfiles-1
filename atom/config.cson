@@ -6,6 +6,7 @@
   core:
     disabledPackages: [
       "ide-flow"
+      "vim-mode"
     ]
   editor:
     invisibles: {}
