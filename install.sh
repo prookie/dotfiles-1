@@ -17,4 +17,4 @@ echo "Get oh-my-zsh"
 git clone https://github.com/robbyrussell/oh-my-zsh.git zsh/oh-my-zsh
 
 # atom config
-ln -s ~/dotfiles/atom ~/atom    # TODO: replace with current path
+ln -s ~/dotfiles/atom ~/.atom    # TODO: replace with current path
