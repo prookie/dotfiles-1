@@ -1,9 +1,10 @@
 [core]
 	repositoryformatversion = 0
-	filemode = true
+	filemode = false
 	bare = true
+	symlinks = false
 	ignorecase = true
-	precomposeunicode = true
+	hideDotFiles = dotGitOnly
 [remote "origin"]
 	url = https://github.com/pipobscure/fsevents
 	fetch = +refs/*:refs/*

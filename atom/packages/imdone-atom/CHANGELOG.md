@@ -1,4 +1,16 @@
-#1.1.11
+#1.1.16
+* Show more debug data on path.join error for getFullPath
+
+#1.1.15
+* Show error text if list name does not conform to `^[\w\-]+$`
+
+#1.1.14
+* If no files are open don't attempt to gather tasks
+
+#1.1.13
+* Update version of imdone-core to allow haxe/.hx file extension
+
+#1.1.12
 * Fix Path for windows users
 
 #1.1.10
