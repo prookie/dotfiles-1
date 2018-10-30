@@ -82,3 +82,6 @@ source ~/.phpbrew/bashrc
 export http_proxy=`proxy-config -h`
 export https_proxy=`proxy-config -s`
 export ftp_proxy=`proxy-config -f`
+
+# go to macOS lockscreen from command line
+alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
